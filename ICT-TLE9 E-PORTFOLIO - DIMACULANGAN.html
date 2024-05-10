@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Style for the tabs */
+    .tabcontent {
+      display: none;
+      background-color: black; /* Set the background color for tab content */
+      padding: 20px;
+      color: white; /* Set text color to white */
+    }
+
+    /* Style for the navigation bar */
+    .tab {
+      position: relative; /* Add relative positioning to the navigation bar */
+      overflow: hidden;
+      background-color: black; /* Set the background color for the navigation bar */
+    }
+
+    .tab button {
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      float: left;
+      transition: 0.3s;
+      font-size: 20px; /* Set the font size for the tab buttons */
+    }
+
+    /* Active tab */
+    .tab button.active {
+      background-color: darkblue;
+    }
+
+    /* Set the background color for the whole body */
+    body {
+      background-color: #001f3f; /* Darker shade of blue */
+      font-family: Arial, sans-serif; /* Set a default font family */
+    }
+
+    /* Style for the image with indentation */
+    .indented-image {
+      margin-right: 20px; /* Adjust the margin as needed */
+      float: left; /* Align images to the left */
+    }
+
+    /* Style for the image with indentation */
+    .indentedd-image {
+      margin-left: 20px; /* Adjust the margin as needed */
+      float: right; /* Align images to the left */
+    }
+
+    /* Style for image descriptions */
+    .description {
+      color: white; /* Default description color */
+      text-align: left; /* Align text to the left */
+      margin-bottom: 10px; /* Add bottom margin for separation */
+    }
+
+    /* Style for image descriptions */
+    .descriptionn {
+      color: white; /* Default description color */
+      text-align: right; /* Align text to the left */
+      margin-bottom: 10px; /* Add bottom margin for separation */
+    }
+
+    /* Style for header h1 */
+    h1 {
+      color: white;
+      font-style: italic;
+      font-family: 'Roboto', sans-serif; /* Change to desired font style */
+    }
+
+    /* Style for the big centered heading */
+    .big-heading {
+      text-align: center;
+      font-size: 60px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    /* Style for the short blue line */
+    .short-line {
+      width: 300px;
+      height: 2px;
+      background-color: blue;
+      margin: 0 auto 20px auto; /* Center the line and add bottom margin */
+    }
+
+    /* Style for the long blue line */
+    .long-line {
+      width: 800px;
+      height: 2px;
+      background-color: blue;
+      margin: 0 auto 20px auto; /* Center the line and add bottom margin */
+    }
+
+    /* Style for videos */
+    video {
+      margin-bottom: 10px; /* Add margin below videos */
+    }
+
+    table {width: 85%;
+      margin: auto;
+      border-collapse: collapse;}
+    tr, td {padding: 10px;
+      text-align: center;
+      border: 3px solid white;}
+    td {background-color: black;
+      color: white;}
+    th {background-color;#8B0000;
+      color:white;}
+    h1 {text-align: center;
+      font-weight: bold;}
+
+    /* Style for bold first row in table */
+    table th:first-child {
+      font-weight: bold; /* Make the first row bold */
+    }
+
+    /* Style for centered numbered lists */
+    ol {
+      text-align: center; /* Center the numbered lists */
+      color: white; /* Set text color to white */
+    }
+
+    /* Style for centered and bigger header */
+    .centered-header {
+      text-align: center;
+      font-size: 40px; /* Adjust the font size as needed */
+    }
+
+    .indented-images {
+      margin: 0 auto; /* Center the image horizontally */
+      display: block; /* Ensure the image is displayed as a block element */
+    }
+
+    /* Style for centered audio */
+    .centered-audio {
+      text-align: center; /* Center the content horizontally */
+      margin-bottom: 20px; /* Add some bottom margin */
+    }
+
+    /* Style for audio player */
+    .audio-player {
+      margin: 0 auto; /* Center the audio player horizontally */
+      display: block; /* Ensure the audio player is displayed as a block element */
+    }
+
+    /* Style for the video section */
+    .video-section {
+      display: flex; /* Use flexbox for layout */
+      align-items: center; /* Center items vertically */
+    }
+
+    /* Style for the video player */
+    .video-player {
+      width: 70%; /* Set the width of the video */
+      max-width: 800px; /* Set a maximum width if needed */
+   }
+
+    /* Style for the video info (header and description) */
+    .video-info {
+      flex-grow: 1; /* Allow the info section to grow to fill remaining space */
+      padding-left: 20px; /* Add some space between video and info */
+    }
+
+    /* Style for the header */
+    .video-info h2 {
+      font-size: 24px; /* Adjust the font size as needed */
+      margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    /* Style for the description */
+    .video-info p {
+      font-size: 16px; /* Adjust the font size as needed */
+      line-height: 1.5; /* Set the line height */
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation bar with tabs -->
+<div class="tab">
+  <div class="cover"></div> <!-- Add the cover inside the navigation bar -->
+  <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'WhoIsAneza')">Who Is Aneza?</button>
+  <button class="tablinks" onclick="openTab(event, 'MyLPSCILife')">My LPSCI Life</button>
+</div>
+
+<!-- Tab content -->
+<div id="Home" class="tabcontent" "centered-audio">
+  <h1 align="center" class="big-heading">Heya! It's Neza!</h1>
+  <h3 align="center"> Did you know I was featured on the magazine hundreds of years ago? Take a look! </h3>
+  <h4 align="center"> Don't forget to play the audio to assure that <i> Romantic Period vibe </i>! </h4>
+  <img src="C:\Users\windows10pro\Downloads\CARMENEZA_20240508_232334_0004.png" alt="Image" class="indented-images" width="1000" height="1500">
+  <audio controls class="audio-player">
+    <source src="C:\Users\windows10pro\Downloads\La Vie En Rose - Violin Cover by Kurt Chen.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div id="WhoIsAneza" class="tabcontent">
+  <!-- Centered and bigger header -->
+  <h2 class="centered-header">Who Is Aneza?</h2>
+  <!-- Centered table with 2 columns and 7 rows -->
+  <div class="long-line"></div> <!-- Short blue line below the heading -->
+
+<table>
+
+  <tr>
+    <td> <b> Type </b> </td>
+    <td> <b> Information </b> </td>
+  </tr>
+
+  <tr>
+    <td> Name</td>
+    <td> Aneza Julia H. Dimaculangan </td>
+  </tr>
+
+  <tr>
+    <td> Nickname </td>
+    <td> "Ane" or "'Neza" </td>
+  </tr>
+
+  <tr>
+    <td> Age </td>
+    <td> 15 </td>
+  </tr>
+
+  <tr>
+    <td> School </td>
+    <td> Las Piñas City National Science High School </td>
+  </tr>
+
+  <tr>
+    <td> Favorite food </td>
+    <td> Buttered Shrimp/Ice Cream </td>
+  </tr>
+
+  <tr>
+    <td> Hobbies </td>
+    <td> Singing, Watching movies, Listening to music </td>
+  </tr>
+
+</Table>
+
+  <!-- Centered numbered lists -->
+  <ul align="center">
+    <li>I am a student from LPSci who wishes to travel the world soon!</li>
+    <li>I am a student-leader who loves to balance academics with my extracurricular activities (even though sometimes, it's stressful!)</li>
+    <li>Leaving Grade 9 and preparing to enter Grade 10 sometimes scares me. But hey, I'm sure I'll learn a lot as I go on with my journey. :> </li>
+  </ul>
+</div>
+
+<div id="MyLPSCILife" class="tabcontent">
+  <h1 class="big-heading">My Journey As A Lapiscian</h1>
+  <div class="short-line"></div> <!-- Short blue line below the heading -->
+  
+  <img src="C:\Users\windows10pro\Downloads\connection.jpeg" alt="Image 4" class="indented-image" width="500" height="400">
+  <h1>Connection in Star Section</h1>
+  <p class="description">The actual journey of my life here in LPSci began when I was in Grade 8, my (our) first face-to-face classes.
+at first, we were all hesitant to communicate with each other as it is still our first day of school. Before beginning the school year,
+I met my very first friends: <i> Jojie, Yanna, and Jose. </i> It was fun to clean the rooms having friends to talk with. Honestly, the rest was simply history. 
+Along the way, I made more friends! At first, I became friends with a few of my classmates although not all things turned out to be okay. However, we surely have learned from each other's mistakes because we can never carry such problems as we grow up, right? 
+Months have passed, and I became friends with <b> Majella, Coreene, Adie, Justine, and Jojie </b>, in which until now, we still are very close with each other. :> <br><br>
+It was fun to get to know my other classmates as we work together during performance tasks as a section. One of my core memories back then was doing the role play <i> 'Florante at Laura'</i> . 
+The image here is our christmas party, another core memory of mine back then was the <i> Parol Making </i> during Values month celebrated every december.
+Remember! This is just a short introduction to my journey here in LPSci, 
+we still have a lot more to explore in my Grade 9 days hehehe. As a section, I can admit that we were not getting along very well hahahahaha,
+but every problem has a solution! Through the school year, we have matured day by day as we move on to the next <i> 'stepping stone' </i> of our life — 
+advancing to Grade 9!</p>
+  <br><br>
+  <div class="long-line"></div> <!-- Short blue line below the heading -->
+  <br>
+
+  <img src="C:\Users\windows10pro\Downloads\okslangmalakas.jpeg" alt="Image 5" class="indentedd-image" width="500" height="400">
+  <h1>Friends to the Rescue!</h1>
+  <p class="descriptionn">Meet my friends Marella, Coreene, Justine, Adie, and Jojie. Despite all of the stressful happenings in my high school years, they're 
+the reason that keeps me going. When I'm with them, life somehow gets easier to handle. Before discussing how nearly we are right now to ending another chapter of our
+high school years, I would like to thank them for being with me throughout my entire journey so far. They have been by my side throughout my ups and downs. 
+They also have already seen me at my best and at my worst. <br><br> I really would like to emphasize how big of a part or role they have played in my 
+life and words can never express the gratitude I have for each and every one of them. I still made more friends along the way such as Achee, Fay, Karlene, Angela and many more. All of them
+will forever have a special place in my heart. I would also like to take this opportunity to thank Ms. Uminga as I am glad to be given the chance to create my very own E-Portfolio as 
+I customize the designs and content I want to express through my notepad (I am really enjoying it po hehehe). 
+</p>
+  <br><br><br><br><br><br>
+
+  <div class="long-line"></div> <!-- Short blue line below the heading --><div class="video-section">
+  <br>
+
+  <!-- Video -->
+  <video controls class="video-player" width="640" height="360">
+    <source src="C:\Users\windows10pro\Downloads\beer.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header and Description -->
+  <div class="video-info">
+    <h2>Jamming With Frends</h2>
+    <p>During free time, I will never forget all of the fun time we had singing karaoke songs even though most of the time, we were out of tune HAHAHAHA. Everytime we 
+sing karaoke, it's as if we're screaming our lungs out, especially when we are in a sound-proof karaoke room. In this simple video, we were singing the song <i> 'beer' </i> during our free time.
+As friends, this is our best way of bonding and we surely cherish every moment of it. </p>
+  </div>
+</div>
+
+  <div class="long-line"></div> <!-- Short blue line below the heading -->
+  <br>
+
+  <img src="C:\Users\windows10pro\Downloads\firstrb.jpeg" alt="Image 6" class="indentedd-image" width="500" height="400">
+  <h1>DZRB Otso-Kuwarenta'y Nuebe</h1>
+  <p align="right" class="descriptionn">Let's have a brief history again hahaha. This is where my radiobroadcasting journey began. This was our performance task in 
+Filipino back then and I really felt attached to how broadcasting is done and how broadcasters perform their job. This is by now my favorite performance task of all time! 
+Writing and delivering news has always fascinated me in a way that I love informing people about the latest news or the latest updates. For me, my groupmates for this 
+performance task was such a dream team! We had a guitarist for the infomercials, we had good scriptwriters, and we had good singers as well (including me HAHAHA JOKE).
+<br> <br> All of us enjoyed this performance task. We kept on practicing over and over again to make sure that we would reach the 5-minute mark perfectly. I was so 
+happy with our performance knowing that we all enjoyed doing it. I know that I will forever bring that experience to me as I grow up. Honestly, I had never thought 
+that this performance task would lead to much greater possibilities for me in achieving my dreams.</p>
+  <br><br><br><br><br><br>
+
+  <div class="long-line"></div> <!-- Short blue line below the heading -->
+  <br>
+
+  <img src="C:\Users\windows10pro\Downloads\belovedrb.jpeg" alt="Image 7" class="indented-image" width="320" height="450">
+  <h1><i>"Dreams Do Come True! </i></h1>
+  <p class="description">This is such a big factor to achieving my dreams of becoming a radiobroadcaster one day, it was such a huge step for me. I was able to train 
+with the National School Press Conference champions ate Frenzie, Kuya, Aaron, and kuya James, along with ate Trisha, our technical director. We were able to win the Division 
+School Press Confrence last February and are now only waiting for the results of the Regionals. I am so thankful and honored to train with them as I have leared and 
+improved so much compared to my very first time radiobroadcasting. <br><br> We are really praying hard right now, hoping that we may be able to qualify for the Nationals this year
+and compete with other regions. Win or lose, for me, the medals, certificates, or the trophies were never the biggest flex I would ever be proud of. I will always be proud 
+to have been able to train and learn from my seniors in ways where I can improve more as I grow up, hoping to be a National School Press conference qualifier one day. This extracurricular 
+is very important to me as i am not sure yet where this might lead me into the future. <br><br> Honestly, I have always been scared to try and explore new things and 
+that is why I am doing my best to escape my comfort zone and do what my heart wants. Sometimes, it wants to rest from all of the overwhelming tortures of reality, but I often believe 
+that the same pot of boiling water that softens the potato, hardens the egg. It's okay to rest sometimes, but in case of doing what I love, I don't feel like the need to rest as I choose to become 
+the egg in the pot, staying strong even under great pressure. <br><br> This journey that has been a huge part of my Grade 9 will always make me remember to strive hard for my dreams and to never give up.
+One day, with enough hardwork and patience, my dreams will certainly be able to come true.</p>
+  <br><br><br>
+
+  <div class="long-line"></div> <!-- Short blue line below the heading -->
+
+  <img src="C:\Users\windows10pro\Downloads\thirdfloor.jpg" alt="Image 8" class="indentedd-image" width="570" height="350"> <br>
+  <h1>My Favorite place in LPSci!</h1>
+  <p class="descriptionn">Everyday during lunch break, this is where me and my friends always eat. This is our favorite place to hang out with each other because it is 
+sometimes windy and very peaceful here. This place is filled with memories for us and I personally go here everytime I have to deal with a specific problem in life. For me, this place gives me peace of mind
+remembering all the good times we have had here in the third floor. <br><br> I took a photo of them on this day because everytime I stay on the third floor, I remember 
+that I have my friends who are always by my side regardless if the world turns its back to me. During clearance week, this is where we play board games to pass time, only waiting for the dismissal time. This place holds a very special place in my heart
+as it serves as my "getaway place" everytime I feel stressed, sad, or just merely bored. </p>
+  <br><br><br><br><br>
+
+  <div class="long-line"></div> <!-- Short blue line below the heading --> <br>
+
+<div class="video-section">
+  <!-- Video -->
+  <video controls class="video-player" width="640" height="360">
+    <source src="C:\Users\windows10pro\Downloads\uwian.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header and Description -->
+  <div class="video-info">
+    <h2><i>"Uwian"</i> Everyday </h2>
+    <p>This is my point of view or POV every dismissal time. Every dismissal time, I see students prepare to go home after a long day. I chose this video because I believe that this is a good symbol of ending my e-portfolio page. 
+Throughout my whole portfolio, I decided to not focus on the awards, medals, or certificates I have received. But rather, I focused on the actual journey or experiences I have been through and throughout those experiences, I highlighted my friends in my portfolio.
+I met many people along the way, and they somehow made it easier for me to survive my current highschool years, let alone Grade 9. I am very thankful to have all of them by my side and I hope at every end of our day, we get the chance to rest at our home after such 
+long days. </p>
+  </div>
+</div>
+
+<div id="Others" class="tabcontent">
+  <!-- Leave this tab blank -->
+</div>
+
+<script>
+  // Function to open tabs
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</body>
+</html>
